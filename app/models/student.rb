@@ -10,14 +10,13 @@ class Student < ActiveRecord::Base
         GradeLevel.find_by(student_id: self.id).num
     end 
 
-
     def self.all_in_grade(grade)
         rel = GradeLevel.all.filter { |grade_level| grade_level.num == grade }
-        # returns the relationships of all who are in <grade>
-
-        # takes the student_id from above and returns the Student it belongs to
-        # rel.each do |b|
-        #     b.find_by(student_id:)
-        # end
+        rel.map do |gl_rel|
+            gl_rel.student
+        end
     end
 end
+
+# get array of all relationships for respective grade
+# 

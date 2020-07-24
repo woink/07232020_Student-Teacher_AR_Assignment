@@ -12,5 +12,6 @@ The methods Student#full_name, Student.all_in_grade and Teacher#tenure I had to 
 
 ## What changes did you make to your app? Why? 
 
-I created a Many to Many relationship with GradeLevel as the join class.
+I created a Many to Many relationship with GradeLevel as the join class. And had to reconfigure the way the #grade_level and .all_in_grade methods worked. Was able to remove the Student#teachers and Teacher#students method as the many to many relationship provides that method
+
 

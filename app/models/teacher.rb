@@ -6,5 +6,4 @@ class Teacher < ActiveRecord::Base
         self.years_of_experience > 5
     end
 
-    
 end
