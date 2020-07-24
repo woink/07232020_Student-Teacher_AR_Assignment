@@ -17,3 +17,12 @@ I created a Many to Many relationship with GradeLevel as the join class. And had
 
 
 Students have many pens, pens have many students. Student { first_name: , last_name:, favorite_color}, Pen { color: , years_old: } Methods for both .all. Pen#oldest_pen, Pen#youngest_pen, Student#favorite_pens
+
+Pen Model
+1.  Add pen model
+2. Create migration for new pen table
+3. Seed
+
+Student Model
+1. add favorite_color column to student table
+

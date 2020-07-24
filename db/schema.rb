@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_24_014432) do
+ActiveRecord::Schema.define(version: 2020_07_24_194555) do
 
   create_table "grade_levels", force: :cascade do |t|
     t.integer "student_id"
@@ -18,9 +18,22 @@ ActiveRecord::Schema.define(version: 2020_07_24_014432) do
     t.string "num"
   end
 
+  create_table "pens", force: :cascade do |t|
+    t.string "color"
+    t.integer "years_old"
+  end
+
+  create_table "student_pens", force: :cascade do |t|
+    t.string "favorite_color"
+    t.string "color"
+    t.integer "student_id"
+    t.integer "pen_id"
+  end
+
   create_table "students", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.string "favorite_color"
   end
 
   create_table "teachers", force: :cascade do |t|
