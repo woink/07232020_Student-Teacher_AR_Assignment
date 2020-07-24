@@ -18,5 +18,3 @@ class Student < ActiveRecord::Base
     end
 end
 
-# get array of all relationships for respective grade
-# 
